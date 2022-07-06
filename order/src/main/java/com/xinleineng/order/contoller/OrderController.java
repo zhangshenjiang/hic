@@ -15,7 +15,7 @@ public class OrderController {
     @RequestMapping("/add")
     public String add(){
         System.out.println("Order Added!");
-        String msg =(String) restTemplate.getForObject("http://localhost:8012/stock/reduct", String.class);
+        String msg = restTemplate.getForObject("http://localhost:8012/stock/reduct", String.class);
         msg= "Order Added Successfull! </br>"+msg;
         return  msg;
     }
